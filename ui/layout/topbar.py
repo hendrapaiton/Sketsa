@@ -14,7 +14,6 @@ def Topbar(page: ft.Page, open_drawer):
         else:
             theme_icon.icon = ft.Icons.DARK_MODE
             theme_icon.icon_color = None
-        page.update()
 
     def toggle_theme():
         """Switch theme and update icon"""
