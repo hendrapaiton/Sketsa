@@ -7,7 +7,6 @@ def Topbar(page: ft.Page, open_drawer):
     page.dark_theme = ft.Theme(color_scheme_seed=ft.Colors.GREEN)
 
     def update_theme_icon():
-        """Update the icon based on the current theme"""
         if page.theme_mode == ft.ThemeMode.DARK:
             theme_icon.icon = ft.Icons.LIGHT_MODE
             theme_icon.icon_color = ft.Colors.YELLOW
@@ -16,7 +15,6 @@ def Topbar(page: ft.Page, open_drawer):
             theme_icon.icon_color = None
 
     def toggle_theme():
-        """Switch theme and update icon"""
         page.theme_mode = (
             ft.ThemeMode.DARK
             if page.theme_mode == ft.ThemeMode.LIGHT
@@ -37,7 +35,11 @@ def Topbar(page: ft.Page, open_drawer):
             icon_size=18,
         ),
         toolbar_height=36,
-        title=ft.Text(value="Gambar Medis".upper(), color=ft.Colors.PRIMARY, size=18),
+        title=ft.Text(
+            value="Gambar Medis".upper(),
+            color=ft.Colors.PRIMARY,
+            size=18,
+            weight="bold"),
         actions=[
             theme_icon,
         ],

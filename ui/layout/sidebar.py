@@ -12,8 +12,34 @@ def Sidebar(page: ft.Page, content: ft.Column) -> ft.NavigationDrawer:
         route_change(page, content, selected_label)
         page.close(drawer)
 
+    user_card = ft.Card(
+        content=ft.Container(
+            content=ft.Row(
+                [
+                    ft.CircleAvatar(
+                        foreground_image_src="https://randomuser.me/api/portraits/men/1.jpg",
+                        radius=48,
+                    ),
+                    ft.Column(
+                        [
+                            ft.Text("Admin".upper(), size=18, weight="bold"),
+                            ft.Text("John Doe", size=12, color=ft.Colors.GREY),
+                        ],
+                        alignment="start",
+                        spacing=0,
+                    ),
+                ],
+                spacing=12,
+                alignment="start",
+            ),
+            padding=18,
+        ),
+        margin=ft.margin.only(bottom=8, top=8),
+    )
+
     drawer = ft.NavigationDrawer(
         controls=[
+            user_card,
             ft.NavigationDrawerDestination(
                 label="Overview",
                 icon=ft.Icons.DASHBOARD,
@@ -36,6 +62,7 @@ def Sidebar(page: ft.Page, content: ft.Column) -> ft.NavigationDrawer:
             ),
         ],
         on_change=handle_change,
+        tile_padding=8,
     )
 
     return drawer
