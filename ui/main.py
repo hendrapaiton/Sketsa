@@ -17,6 +17,5 @@ class Main:
         drawer = Sidebar(page)
         page.drawer = drawer
         Topbar(page, open_drawer)
-        # Clear and set up the main layout
         page.controls.clear()
         page.update()

@@ -7,19 +7,19 @@ def Sidebar(page: ft.Page):
     drawer = ft.NavigationDrawer(
         controls=[
             ft.NavigationDrawerDestination(
-                label="Item 1",
-                icon=ft.Icons.DOOR_BACK_DOOR_OUTLINED,
-                selected_icon=ft.Icons.DOOR_BACK_DOOR,
+                label="Radiology",
+                icon=ft.Icons.MEDICAL_SERVICES,
+                selected_icon=ft.Icons.LOCAL_HOSPITAL,
             ),
             ft.NavigationDrawerDestination(
-                icon=ft.Icons.MAIL_OUTLINED,
-                label="Item 2",
-                selected_icon=ft.Icons.MAIL,
+                label="Patient",
+                icon=ft.Icons.PERSON_OUTLINED,
+                selected_icon=ft.Icons.PERSON,
             ),
             ft.NavigationDrawerDestination(
-                icon=ft.Icons.PHONE_OUTLINED,
-                label="Item 3",
-                selected_icon=ft.Icons.PHONE,
+                label="Management",
+                icon=ft.Icons.SETTINGS_OUTLINED,
+                selected_icon=ft.Icons.SETTINGS,
             ),
         ],
         on_change=handle_change,
