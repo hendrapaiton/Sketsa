@@ -4,7 +4,7 @@ import flet as ft
 def Overview():
     return ft.Text(
         "Overview Page",
-        size=20,
+        size=18,
         weight=ft.FontWeight.BOLD,
-        color=ft.Colors.PRIMARY,
+        color=ft.Colors.SECONDARY,
     )
