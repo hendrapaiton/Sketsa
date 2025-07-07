@@ -4,7 +4,7 @@ from ui.page.patient import Patient
 from ui.page.radiology import Radiology
 
 
-def route_change(page, content, route):
+def route_change(content, route):
     content.controls.clear()
     if route == "Overview":
         content.controls.append(Overview())
@@ -15,5 +15,4 @@ def route_change(page, content, route):
     elif route == "Management":
         content.controls.append(Management())
     else:
-        page.controls.clear()
-    page.update()
+        content.controls.clear()
