@@ -1,8 +1,6 @@
 import flet as ft
-from route import route_change
 from ui.layout.sidebar import Sidebar
 from ui.layout.topbar import Topbar
-from ui.page.overview import Overview
 
 
 class Main:
